@@ -583,6 +583,45 @@ footer {
   }
 }
 
+/* Page Preview Cards */
+.page-preview-card {
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  background: #fff;
+  padding: 25px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--accent);
+  height: 100%;
+  text-align: center;
+}
+
+.page-preview-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.page-preview-card i {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.page-preview-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.page-preview-card p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.page-preview-card .btn {
+  width: 100%;
+}
+
   </style>
 </head>
 <body>
@@ -675,6 +714,70 @@ footer {
       </div>
       <div class="col-lg-6" data-aos="fade-left">
         <img src="https://images.unsplash.com/photo-1591696205602-2f950c417dad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Aquaculture research" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </section>
+
+    <!-- Project Pages Overview Section -->
+  <section class="content-section bg-light">
+    <div class="container">
+      <h2 class="section-title">Explore Our Proposal</h2>
+      <p class="text-center mb-5">Discover the different aspects of our food security research project</p>
+      
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="page-preview-card">
+            <i class="fas fa-file-alt"></i>
+            <h3>Executive Summary</h3>
+            <p>An overview of our proposal to develop sustainable aquaculture feed from wastewater-derived biomass.</p>
+            <a href="summary.html" class="btn btn-primary">Read Summary</a>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="page-preview-card">
+            <i class="fas fa-info-circle"></i>
+            <h3>Introduction</h3>
+            <p>Background information, research objectives, and expected outcomes of our project.</p>
+            <a href="introduction.html" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="page-preview-card">
+            <i class="fas fa-star"></i>
+            <h3>Importance to Qatar</h3>
+            <p>How our research aligns with Qatar's national priorities and its potential impact.</p>
+            <a href="importance.html" class="btn btn-primary">Discover Importance</a>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="page-preview-card">
+            <i class="fas fa-tasks"></i>
+            <h3>Work Plan</h3>
+            <p>Detailed methodology, technical description, and project timeline.</p>
+            <a href="workplan.html" class="btn btn-primary">View Plan</a>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="page-preview-card">
+            <i class="fas fa-users"></i>
+            <h3>Project Management</h3>
+            <p>Team structure, risk management, and project coordination details.</p>
+            <a href="management.html" class="btn btn-primary">Meet the Team</a>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="page-preview-card">
+            <i class="fas fa-book"></i>
+            <h3>References</h3>
+            <p>Academic and technical references supporting our research.</p>
+            <a href="references.html" class="btn btn-primary">Browse References</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
