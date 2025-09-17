@@ -419,6 +419,395 @@
       color: var(--accent);
       margin-bottom: 15px;
     }
+    /* Work Package Section */
+        .sub-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+        
+        .sub-section h2 {
+            font-size: 28px;
+            color: #0056b3;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eaeaea;
+            position: relative;
+        }
+        
+        .sub-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: #007bff;
+        }
+        
+        .sub-section p {
+            margin-bottom: 25px;
+            color: #555;
+            font-size: 16px;
+        }
+        
+        /* Work Package Grid */
+        .work-package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .work-package-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-left: 4px solid #007bff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .work-package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 123, 255, 0.15);
+        }
+        
+        .work-package-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 123, 255, 0.03) 0%, rgba(0, 86, 179, 0.05) 100%);
+            z-index: 0;
+        }
+        
+        .wp-number {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 60px;
+            height: 60px;
+            background: #007bff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+            z-index: 2;
+        }
+        
+        .wp-title {
+            font-size: 20px;
+            color: #0056b3;
+            margin: 10px 0 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .work-package-card p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Different colors for each card */
+        .work-package-card:nth-child(1) {
+            border-left-color: #007bff;
+        }
+        
+        .work-package-card:nth-child(1) .wp-number {
+            background: #007bff;
+        }
+        
+        .work-package-card:nth-child(2) {
+            border-left-color: #28a745;
+        }
+        
+        .work-package-card:nth-child(2) .wp-number {
+            background: #28a745;
+        }
+        
+        .work-package-card:nth-child(3) {
+            border-left-color: #dc3545;
+        }
+        
+        .work-package-card:nth-child(3) .wp-number {
+            background: #dc3545;
+        }
+        
+        .work-package-card:nth-child(4) {
+            border-left-color: #ffc107;
+        }
+        
+        .work-package-card:nth-child(4) .wp-number {
+            background: #ffc107;
+            color: #333;
+        }
+        
+        .work-package-card:nth-child(5) {
+            border-left-color: #6f42c1;
+        }
+        
+        .work-package-card:nth-child(5) .wp-number {
+            background: #6f42c1;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .work-package-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sub-section {
+                padding: 20px;
+            }
+            
+            .sub-section h2 {
+                font-size: 24px;
+            }
+        }
+
+             /* Timeline Section */
+        .sub-section {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+        
+        .sub-section h2 {
+            font-size: 32px;
+            color: #0056b3;
+            margin-bottom: 15px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .sub-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            border-radius: 2px;
+        }
+        
+        .sub-section > p {
+            text-align: center;
+            margin-bottom: 35px;
+            color: #555;
+            font-size: 17px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Timeline Container */
+        .timeline-container {
+            position: relative;
+            padding: 40px 0;
+        }
+        
+        .timeline-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            background: linear-gradient(to bottom, #007bff, #0056b3);
+            border-radius: 2px;
+        }
+        
+        .timeline {
+            position: relative;
+        }
+        
+        .timeline-item {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            position: relative;
+            border-top: 5px solid #007bff;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 123, 255, 0.15);
+        }
+        
+        .timeline-year {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #007bff;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 18px;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+            min-width: 100px;
+            text-align: center;
+        }
+        
+        .timeline-content p {
+            margin-top: 20px;
+            margin-bottom: 15px;
+            color: #444;
+            font-size: 16px;
+        }
+        
+        .timeline-content ul {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content li {
+            margin-bottom: 8px;
+            color: #555;
+            position: relative;
+        }
+        
+        .timeline-content li:before {
+            content: '•';
+            color: #007bff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 4px solid #2196f3;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+            color: #1565c0;
+            font-style: italic;
+        }
+        
+        /* Different colors for each timeline item */
+        .timeline-item:nth-child(1) .timeline-content {
+            border-top-color: #007bff;
+        }
+        
+        .timeline-item:nth-child(1) .timeline-year {
+            background: #007bff;
+        }
+        
+        .timeline-item:nth-child(2) .timeline-content {
+            border-top-color: #28a745;
+        }
+        
+        .timeline-item:nth-child(2) .timeline-year {
+            background: #28a745;
+        }
+        
+        .timeline-item:nth-child(3) .timeline-content {
+            border-top-color: #ff9800;
+        }
+        
+        .timeline-item:nth-child(3) .timeline-year {
+            background: #ff9800;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .timeline-container:before {
+                left: 30px;
+            }
+            
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+            
+            .timeline-content {
+                width: 80%;
+                margin-left: 70px;
+            }
+            
+            .timeline-year {
+                left: -85px;
+                transform: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .sub-section {
+                padding: 25px 20px;
+            }
+            
+            .sub-section h2 {
+                font-size: 26px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+                margin-left: 60px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .timeline-content {
+                margin-left: 50px;
+                padding: 20px 15px;
+            }
+            
+            .timeline-year {
+                padding: 6px 15px;
+                font-size: 16px;
+                left: -70px;
+                min-width: 80px;
+            }
+        }
+
+
   </style>
 </head>
 <body>
@@ -440,7 +829,7 @@
           <li class="nav-item"><a class="nav-link" href="importance.html">Importance</a></li>
           <li class="nav-item"><a class="nav-link active" href="workplan.html">Work Plan</a></li>
           <li class="nav-item"><a class="nav-link" href="management.html">Management</a></li>
-          <li class="nav-item"><a class="nav-link" href="references.html">References</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>

@@ -282,6 +282,99 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
 }
 
+
+/* Image and logo styling */
+.qrdi-logo {
+  width: 80px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.collaboration-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 25px 0;
+}
+
+.collaboration-logo {
+  max-width: 150px;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+/* Section header with logo/title alignment */
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-icon {
+  font-size: 2rem;
+  color: #007bff;
+  margin-right: 15px;
+}
+
+/* Impact grid layout */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.impact-card {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+}
+
+.impact-card h3 {
+  margin-top: 0;
+  color: #0056b3;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .qrdi-logo, .section-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .collaboration-logos {
+    gap: 15px;
+  }
+  
+  .collaboration-logo {
+    max-width: 120px;
+  }
+  
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -468,7 +561,7 @@ footer {
           <li class="nav-item"><a class="nav-link active" href="importance.html">Importance</a></li>
           <li class="nav-item"><a class="nav-link" href="workplan.html">Work Plan</a></li>
           <li class="nav-item"><a class="nav-link" href="management.html">Management</a></li>
-          <li class="nav-item"><a class="nav-link" href="references.html">References</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -489,7 +582,7 @@ footer {
       <!-- Alignment to Research Priority -->
       <div class="sub-section" data-aos="fade-up" data-aos-delay="100">
         <h2>Alignment to Research Priority</h2>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/QRDI_Council_Logo.png/320px-QRDI_Council_Logo.png" alt="QRDI Council Logo" class="qrdi-logo">
+        <img src="photos/QRDI.png" alt="QRDI Council Logo" class="qrdi-logo">
         <p>This project aligns with Qatar's national research priorities under the Qatar Research, Development, and Innovation (QRDI) strategy, specifically addressing food security and sustainability. By targeting aquaculture feed production through wastewater-derived biomass, the project supports the broader aim of reducing dependence on imports and enhancing local capacity in sustainable food systems.</p>
         
         <div class="highlight-box">
@@ -512,26 +605,26 @@ footer {
         
         <div class="impact-grid">
           <div class="impact-card">
-            <i class="fas fa-users"></i>
-            <h3>Social Impact</h3>
+            
+            <h3><i class="fas fa-users" style="margin-right: 0.7rem;"></i>Social Impact</h3>
             <p>Enhances food security and self-sufficiency while engaging local communities and developing national expertise in sustainable aquaculture practices.</p>
           </div>
           
           <div class="impact-card">
-            <i class="fas fa-heartbeat"></i>
-            <h3>Health Impact</h3>
+            
+            <h3><i class="fas fa-heartbeat" style="margin-right: 0.7rem;"></i>Health Impact</h3>
             <p>Provides access to safe, sustainable, and nutritious fish protein through aquaculture expansion, supporting public health and nutrition goals.</p>
           </div>
           
           <div class="impact-card">
-            <i class="fas fa-chart-line"></i>
-            <h3>Economic Impact</h3>
+            
+            <h3> <i class="fas fa-chart-line" style="margin-right: 0.7rem;"></i> Economic Impact</h3>
             <p>Reduces dependency on imported feeds, decreases costs, and creates opportunities for local agritech and aquaculture industries.</p>
           </div>
           
           <div class="impact-card">
-            <i class="fas fa-leaf"></i>
-            <h3>Environmental Impact</h3>
+            
+            <h3><i class="fas fa-leaf" style="margin-right: 0.7rem;"></i>Environmental Impact</h3>
             <p>Promotes circular economy principles, reduces waste by utilizing FSPW, lowers pressure on marine ecosystems, and saves water and land resources.</p>
           </div>
         </div>
@@ -547,9 +640,9 @@ footer {
         <p>This project builds on strong collaboration between HBKU, Shell Qatar, and local aquaculture stakeholders. Farmers and industry partners will be engaged through acceptability surveys, pilot-scale feed trials, and direct consultation to ensure that the developed feed aligns with practical needs and market realities.</p>
         
         <div class="collaboration-logos">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Hamad_Bin_Khalifa_University_Logo.svg/320px-Hamad_Bin_Khalifa_University_Logo.svg.png" alt="HBKU Logo" class="collaboration-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Shell_logo.svg/320px-Shell_logo.svg.png" alt="Shell Logo" class="collaboration-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Qatar_National_Vision_2030_Logo.png/320px-Qatar_National_Vision_2030_Logo.png" alt="Qatar National Vision 2030 Logo" class="collaboration-logo">
+          <img src="photos/hbku.jpeg" alt="HBKU Logo" class="collaboration-logo">
+          <img src="photos/shell.png" alt="Shell Logo" class="collaboration-logo">
+          <img src="photos/QNV.png" alt="Qatar National Vision 2030 Logo" class="collaboration-logo">
         </div>
         
         <p>Through close cooperation with stakeholders and end-users, the project will not only develop a sustainable feed solution but also ensure adoption and integration into Qatar's aquaculture sector. Key collaboration aspects include:</p>
