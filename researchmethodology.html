@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Work Plan - Food Security Project</title>
+  <title>Research Methodology - Food Security Project</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
@@ -821,6 +821,175 @@
             }
         }
 
+        /* Methodology Cards */
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .methodology-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .methodology-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        
+        .methodology-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(13, 59, 102, 0.02) 0%, rgba(46, 134, 171, 0.05) 100%);
+            z-index: 0;
+        }
+        
+        .methodology-number {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 70px;
+            height: 70px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(13, 59, 102, 0.3);
+            z-index: 2;
+        }
+        
+        .methodology-title {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 10px 0 20px;
+            position: relative;
+            z-index: 1;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .methodology-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .methodology-content p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .methodology-content ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .methodology-content li {
+            margin-bottom: 10px;
+            color: #555;
+            position: relative;
+        }
+        
+        .methodology-content li:before {
+            content: '•';
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .equipment-list, .analysis-list {
+            margin-top: 20px;
+        }
+        
+        .equipment-item, .analysis-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 3px solid var(--secondary);
+        }
+        
+        .equipment-item strong, .analysis-item strong {
+            color: var(--primary);
+        }
+        
+        /* Different colors for each card */
+        .methodology-card:nth-child(1) {
+            border-left-color: #007bff;
+        }
+        
+        .methodology-card:nth-child(1) .methodology-number {
+            background: #007bff;
+        }
+        
+        .methodology-card:nth-child(2) {
+            border-left-color: #28a745;
+        }
+        
+        .methodology-card:nth-child(2) .methodology-number {
+            background: #28a745;
+        }
+        
+        .methodology-card:nth-child(3) {
+            border-left-color: #dc3545;
+        }
+        
+        .methodology-card:nth-child(3) .methodology-number {
+            background: #dc3545;
+        }
+        
+        .methodology-card:nth-child(4) {
+            border-left-color: #ffc107;
+        }
+        
+        .methodology-card:nth-child(4) .methodology-number {
+            background: #ffc107;
+            color: #333;
+        }
+        
+        .methodology-card:nth-child(5) {
+            border-left-color: #6f42c1;
+        }
+        
+        .methodology-card:nth-child(5) .methodology-number {
+            background: #6f42c1;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .methodology-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .methodology-card {
+                padding: 20px;
+            }
+            
+            .methodology-number {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+        }
 
   </style>
 </head>
@@ -859,158 +1028,511 @@
   </div>
 </div>
 
-<!-- Implementation Strategy -->
-<div class="sub-section" data-aos="fade-up">
+<!-- Methodology Content -->
+<div class="content-section">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="text-center mb-5">
-          <h2 class="section-title">Implementation Strategy</h2>
-          <p class="lead">The project will be implemented through a phased approach, ensuring systematic progression from laboratory-scale optimization to pilot-scale validation over 36 months.</p>
-        </div>
-        
-        <!-- Timeline Visualization -->
-        <div class="timeline-visual mb-5" data-aos="fade-up">
-          <div class="timeline-bar">
-            <div class="timeline-progress" data-progress="100"></div>
-          </div>
-          <div class="timeline-milestones">
-            <div class="milestone active" data-phase="1">
-              <div class="milestone-dot"></div>
-              <span class="milestone-label">Lab Scale</span>
-              <span class="milestone-duration">Months 1-12</span>
-            </div>
-            <div class="milestone" data-phase="2">
-              <div class="milestone-dot"></div>
-              <span class="milestone-label">Pilot Scale</span>
-              <span class="milestone-duration">Months 13-24</span>
-            </div>
-            <div class="milestone" data-phase="3">
-              <div class="milestone-dot"></div>
-              <span class="milestone-label">Trials & Analysis</span>
-              <span class="milestone-duration">Months 25-36</span>
+    <div class="sub-section" data-aos="fade-up">
+      <h2>Methodological Framework</h2>
+      <p>The methodology for achieving the project objectives will utilize comprehensive facilities at HBKU-CSE, HBKU-QEERI, and HBKU-QBRI labs. The project employs a systematic approach with five key objectives, each with specific technical methodologies.</p>
+      
+      <div class="methodology-grid">
+        <!-- Objective 1 -->
+        <div class="methodology-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-header">
+            <div class="methodology-number">1</div>
+            <h3 class="methodology-title">Reactor Setup and Continuous Operation</h3>
+            <div class="card-icon">
+              <i class="fas fa-industry"></i>
             </div>
           </div>
-        </div>
-        
-        <!-- Phases Grid -->
-        <div class="implementation-phases">
-          <div class="phase-card" data-aos="fade-up" data-aos-delay="100" data-phase="1">
-            <div class="phase-header">
-              <div class="phase-icon">
+          <div class="methodology-content">
+            <p class="objective-summary">Implementation of continuous operation systems for wastewater treatment and biomass production.</p>
+            
+            <div class="content-section">
+              <div class="section-title">
+                <i class="fas fa-tools"></i>
+                <h4>Equipment and Setup</h4>
+              </div>
+              <div class="content-grid">
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-recycle"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>155 L flat panel reactor</strong> and <strong>60 L anaerobic pilot scale reactor (BIOPAQ IC)</strong> housed in a translucent greenhouse equipped with necessary feed and recirculation pumps for continuous operation.
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Monitoring equipment:</strong> Solar irradiance measured using Black-Comet UV-VIS spectrophotometer (StellarNet Inc); pH and temperature monitored using ThermoFisher Scientific multiparameter meter (Orion Ross Ultra pH/ATC Triode).
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-vial"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Analytical instruments:</strong> Optical density assessed using UV-3600 plus UV-VIS-NIR spectrophotometer (Shimadzu).
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="content-section">
+              <div class="section-title">
                 <i class="fas fa-flask"></i>
-                <span class="phase-number">01</span>
+                <h4>Chemical Analysis Methods</h4>
               </div>
-              <h3>Phase 1: Laboratory Scale</h3>
-              <div class="phase-timeline">Months 1-12</div>
-            </div>
-            <div class="phase-content">
-              <p>Small-scale reactor optimization, parameter screening, and preliminary digestibility studies.</p>
-              <div class="phase-details">
-                <h4>Key Activities:</h4>
-                <ul>
-                  <li>Reactor design and optimization</li>
-                  <li>Parameter screening (light, temperature, nutrients)</li>
-                  <li>Preliminary digestibility studies</li>
-                  <li>Biomass quality assessment</li>
-                  <li>Initial feed formulation development</li>
-                </ul>
-              </div>
-              <div class="phase-outputs">
-                <h4>Expected Outputs:</h4>
-                <div class="output-tags">
-                  <span class="output-tag">Optimized reactor parameters</span>
-                  <span class="output-tag">Initial biomass characterization</span>
-                  <span class="output-tag">Digestibility baseline data</span>
-                  <span class="output-tag">Preliminary feed formulations</span>
+              <div class="content-grid">
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-vial"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Sample Preparation:</strong> Centrifuging samples at 6,000 g (Sorvall Lynx 6000, ThermoScientific), filtering supernatant through 0.2 µm sterile syringe filters (VWR).
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="phase-card" data-aos="fade-up" data-aos-delay="200" data-phase="2">
-            <div class="phase-header">
-              <div class="phase-icon">
-                <i class="fas fa-industry"></i>
-                <span class="phase-number">02</span>
-              </div>
-              <h3>Phase 2: Pilot Scale</h3>
-              <div class="phase-timeline">Months 13-24</div>
-            </div>
-            <div class="phase-content">
-              <p>Scale-up to pilot reactors, continuous process optimization, and comprehensive feed formulation.</p>
-              <div class="phase-details">
-                <h4>Key Activities:</h4>
-                <ul>
-                  <li>Pilot reactor installation and operation</li>
-                  <li>Continuous process optimization</li>
-                  <li>Advanced feed formulation development</li>
-                  <li>Quality control protocols establishment</li>
-                  <li>Preparation for aquaculture trials</li>
-                </ul>
-              </div>
-              <div class="phase-outputs">
-                <h4>Expected Outputs:</h4>
-                <div class="output-tags">
-                  <span class="output-tag">Pilot-scale production data</span>
-                  <span class="output-tag">Optimized feed formulations</span>
-                  <span class="output-tag">Quality control framework</span>
-                  <span class="output-tag">Trial preparation protocols</span>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>COD Measurement:</strong> Closed micro-digestion method using Hach high-range COD vials.
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="phase-card" data-aos="fade-up" data-aos-delay="300" data-phase="3">
-            <div class="phase-header">
-              <div class="phase-icon">
-                <i class="fas fa-chart-line"></i>
-                <span class="phase-number">03</span>
-              </div>
-              <h3>Phase 3: Trials & Analysis</h3>
-              <div class="phase-timeline">Months 25-36</div>
-            </div>
-            <div class="phase-content">
-              <p>Aquaculture feeding trials, comprehensive data analysis, sustainability assessment, and final reporting.</p>
-              <div class="phase-details">
-                <h4>Key Activities:</h4>
-                <ul>
-                  <li>Controlled feeding trials with target species</li>
-                  <li>Growth performance monitoring and analysis</li>
-                  <li>Health and nutritional assessment</li>
-                  <li>Life cycle assessment and techno-economic analysis</li>
-                  <li>Comprehensive data analysis and final reporting</li>
-                </ul>
-              </div>
-              <div class="phase-outputs">
-                <h4>Expected Outputs:</h4>
-                <div class="output-tags">
-                  <span class="output-tag">Growth performance data</span>
-                  <span class="output-tag">Health assessment reports</span>
-                  <span class="output-tag">Sustainability analysis</span>
-                  <span class="output-tag">Final research report</span>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>TOC, IC, and TN Analysis:</strong> TOC analyzer (TOC-L series with TNM-1, Shimadzu).
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-water"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>VFA and Anion Analysis:</strong> Ion chromatography (940 Professional IC Vario, Metrohm) for VFAs and anions such as phosphate.
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-weight"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Biomass Concentration:</strong> TSS and VSS measurements using standard methods (APHA, 2012).
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-dna"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Microbial Community Analysis:</strong> DNA extraction using DNeasy PowerBiofilm kit (Qiagen) and 16S metagenomics as described in George et al. (2022).
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
-        <!-- Overall Timeline Summary -->
-        <div class="timeline-summary" data-aos="fade-up" data-aos-delay="500">
-          <div class="summary-card">
-            <i class="fas fa-calendar-alt"></i>
-            <div class="summary-content">
-              <h4>Project Duration</h4>
-              <p>36 Months Total</p>
-              <div class="progress">
-                <div class="progress-bar" style="width: 33.3%">
-                  <span>Phase 1: 12 Months</span>
+
+        <!-- Objective 2 -->
+        <div class="methodology-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-header">
+            <div class="methodology-number">2</div>
+            <h3 class="methodology-title">Biomass Characterization and Analysis</h3>
+            <div class="card-icon">
+              <i class="fas fa-microscope"></i>
+            </div>
+          </div>
+          <div class="methodology-content">
+            <p class="objective-summary">Comprehensive analysis of biomass composition, nutritional value, and safety parameters.</p>
+            
+            <div class="content-section">
+              <div class="section-title">
+                <i class="fas fa-vial"></i>
+                <h4>Sample Preparation</h4>
+              </div>
+              <div class="content-item">
+                <div class="item-icon">
+                  <i class="fas fa-snowflake"></i>
                 </div>
-                <div class="progress-bar" style="width: 33.3%">
-                  <span>Phase 2: 12 Months</span>
+                <div class="item-content">
+                  Biomass will be harvested, freeze-dried, and homogenized for analysis.
                 </div>
-                <div class="progress-bar" style="width: 33.3%">
-                  <span>Phase 3: 12 Months</span>
+              </div>
+            </div>
+            
+            <div class="content-section">
+              <div class="section-title">
+                <i class="fas fa-chart-pie"></i>
+                <h4>Analytical Methods</h4>
+              </div>
+              <div class="content-grid">
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-vial"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Protein Content:</strong> Ultrasonic-assisted alkali extraction followed by quantification with Modified Lowry method as proposed by Wada et al. (2024).
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-dna"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Amino Acids Characterization:</strong> Complete enzymatic hydrolysis followed by analysis as described by Wada et al. (2024).
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-oil-can"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Lipid and Carbohydrate Content:</strong> Bligh and Dyer method for lipids, Anthrone method for carbohydrates.
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-palette"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Pigments and Coenzyme-Q10:</strong> Spectrophotometric measurement.
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-atom"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Trace Elements and Heavy Metals:</strong> Acid microwave digestion followed by ICP-OES analysis as described by Wada et al. (2023).
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Elemental Composition:</strong> CHNS analysis using elemental analyzer.
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-dna"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Nucleic Acid Quantification:</strong> NanoDrop Microvolume UV-Vis 2000 Spectrophotometer.
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-virus"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Endotoxin Levels:</strong> Limulus amebocyte lysate (LAL) assay.
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-gas-pump"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Organic Compounds Characterization:</strong> Gas chromatography/mass spectrometry following EPA methods 8260 B and 8260 C.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Objective 3 -->
+        <div class="methodology-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-header">
+            <div class="methodology-number">3</div>
+            <h3 class="methodology-title">Biomass Digestibility Enhancement</h3>
+            <div class="card-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+          </div>
+          <div class="methodology-content">
+            <p class="objective-summary">Implementation of pretreatment methods to improve biomass digestibility for aquaculture feed.</p>
+            
+            <div class="content-section">
+              <div class="section-title">
+                <i class="fas fa-cogs"></i>
+                <h4>Pretreatment Methods</h4>
+              </div>
+              <div class="method-list">
+                <div class="method-item">
+                  <i class="fas fa-temperature-high"></i>
+                  <span>Extrusion at high temperatures (>90ºC)</span>
+                </div>
+                <div class="method-item">
+                  <i class="fas fa-pressure-washer"></i>
+                  <span>Autoclaving</span>
+                </div>
+                <div class="method-item">
+                  <i class="fas fa-vial"></i>
+                  <span>Alkali and enzymatic treatments</span>
+                </div>
+                <div class="method-item">
+                  <i class="fas fa-wave-square"></i>
+                  <span>Sonication</span>
+                </div>
+                <div class="method-item">
+                  <i class="fas fa-cog"></i>
+                  <span>Bead milling (previously utilized for biomass cellular disruption study - Wada et al., 2024)</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="content-section">
+              <div class="section-title">
+                <i class="fas fa-sliders-h"></i>
+                <h4>Key Variables Examined</h4>
+              </div>
+              <div class="variable-list">
+                <div class="variable-item">
+                  <i class="fas fa-clock"></i>
+                  <span>Pretreatment duration</span>
+                </div>
+                <div class="variable-item">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>Integrity of cell walls post-treatment</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="content-section">
+              <div class="section-title">
+                <i class="fas fa-chart-line"></i>
+                <h4>Evaluation Techniques</h4>
+              </div>
+              <div class="content-grid">
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-microscope"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Physical Characteristics:</strong> Scanning electron microscope (SEM, Quanta 650 FEG-ESEM) and transmission electron microscope (TEM, Talos F200C TEM).
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-vial"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Digestibility Assessment:</strong> In vitro enzymatic digestibility assays using digestive enzymes (trypsin, pepsin, amylase, maltase, lipase) to mimic gastrointestinal conditions in fish and shrimp.
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-vial"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Protein Solubility:</strong> Analytical techniques similar to protein quantification methods.
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="highlight-box">
+              <i class="fas fa-lightbulb"></i>
+              <p>The two most effective pretreatment methods will be selected for subsequent shrimp feeding trials based on apparent digestibility coefficients.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Objective 4 -->
+        <div class="methodology-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-header">
+            <div class="methodology-number">4</div>
+            <h3 class="methodology-title">Aquaculture Feeding Trials</h3>
+            <div class="card-icon">
+              <i class="fas fa-fish"></i>
+            </div>
+          </div>
+          <div class="methodology-content">
+            <p class="objective-summary">Controlled feeding trials to evaluate the performance of PNSB-based feeds.</p>
+            
+            <div class="content-section">
+              <div class="section-title">
+                <i class="fas fa-shrimp"></i>
+                <h4>Shrimp Trials (Litopenaeus vannamei)</h4>
+              </div>
+              <div class="trial-details">
+                <div class="trial-item">
+                  <i class="fas fa-home"></i>
+                  <div class="trial-content">
+                    <strong>Housing:</strong> Larvae reared in aerated glass aquariums with 3-4 L artificial seawater
+                  </div>
+                </div>
+                <div class="trial-item">
+                  <i class="fas fa-ruler-combined"></i>
+                  <div class="trial-content">
+                    <strong>Stocking density:</strong> ~600 post larvae per square meter (20 shrimp per aquarium)
+                  </div>
+                </div>
+                <div class="trial-item">
+                  <i class="fas fa-calendar-alt"></i>
+                  <div class="trial-content">
+                    <strong>Duration:</strong> 10-week trial duration with eight test conditions
+                  </div>
+                </div>
+                <div class="trial-item">
+                  <i class="fas fa-utensils"></i>
+                  <div class="trial-content">
+                    <strong>Feeding:</strong> Three times daily with blends of the best two digested PNSB MP groups at replacement levels of 30%, 50%, and 100%
+                  </div>
+                </div>
+                <div class="trial-item">
+                  <i class="fas fa-chart-line"></i>
+                  <div class="trial-content">
+                    <strong>Monitoring:</strong> Weekly growth, health, performance (FCR, intake)
+                  </div>
+                </div>
+                <div class="trial-item">
+                  <i class="fas fa-clipboard-check"></i>
+                  <div class="trial-content">
+                    <strong>Endpoint analysis:</strong> Protein, elemental, and proximate composition
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="content-section">
+              <div class="section-title">
+                <i class="fas fa-fish"></i>
+                <h4>Asian Sea Bass Trials</h4>
+              </div>
+              <div class="trial-details">
+                <div class="trial-item">
+                  <i class="fas fa-home"></i>
+                  <div class="trial-content">
+                    <strong>Housing:</strong> Juveniles raised in recirculating aquaculture systems (300 L tanks)
+                  </div>
+                </div>
+                <div class="trial-item">
+                  <i class="fas fa-ruler-combined"></i>
+                  <div class="trial-content">
+                    <strong>Stocking:</strong> 20-50 fish per tank (subject to resource availability)
+                  </div>
+                </div>
+                <div class="trial-item">
+                  <i class="fas fa-calendar-alt"></i>
+                  <div class="trial-content">
+                    <strong>Duration:</strong> 12-week trial duration
+                  </div>
+                </div>
+                <div class="trial-item">
+                  <i class="fas fa-utensils"></i>
+                  <div class="trial-content">
+                    <strong>Feeding:</strong> Twice daily with PNSB MP blended feeds at 30%, 50%, 70%, and 100% replacement levels
+                  </div>
+                </div>
+                <div class="trial-item">
+                  <i class="fas fa-chart-line"></i>
+                  <div class="trial-content">
+                    <strong>Monitoring:</strong> Initial and weekly measurements of weight and length
+                  </div>
+                </div>
+                <div class="trial-item">
+                  <i class="fas fa-clipboard-check"></i>
+                  <div class="trial-content">
+                    <strong>Endpoint variables:</strong> Similar to shrimp trials
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Objective 5 -->
+        <div class="methodology-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="card-header">
+            <div class="methodology-number">5</div>
+            <h3 class="methodology-title">Sustainability and Economic Assessment</h3>
+            <div class="card-icon">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+          </div>
+          <div class="methodology-content">
+            <p class="objective-summary">Comprehensive evaluation of socio-economic viability and environmental sustainability.</p>
+            
+            <div class="content-section">
+              <div class="section-title">
+                <i class="fas fa-chart-bar"></i>
+                <h4>Socio-Economic Assessment</h4>
+              </div>
+              <div class="content-grid">
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Stakeholder Surveys:</strong> Semi-structured questionnaires for local fish farmers and feed sellers; online survey for fish-consuming adults in Qatar.
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Data Analysis:</strong> Quantitative data analyzed using descriptive and inferential statistics with Microsoft Excel and JASP 0.18.1; qualitative data from key informant interviews with government stakeholders undergo thematic analysis.
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="content-section">
+              <div class="section-title">
+                <i class="fas fa-calculator"></i>
+                <h4>Techno-Economic Analysis</h4>
+              </div>
+              <div class="content-item">
+                <div class="item-icon">
+                  <i class="fas fa-balance-scale"></i>
+                </div>
+                <div class="item-content">
+                  Comparison of costs for producing a tonne of alternative feed locally versus conventional aquafeed production and importation, utilizing standardized Excel formulas and literature data.
+                </div>
+              </div>
+            </div>
+            
+            <div class="content-section">
+              <div class="section-title">
+                <i class="fas fa-leaf"></i>
+                <h4>Life Cycle Assessment (LCA)</h4>
+              </div>
+              <div class="content-grid">
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-project-diagram"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Approach:</strong> Cradle-to-gate approach using Gabi software.
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-globe"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Impact Categories:</strong> Climate change, water use, land use, and other environmental impacts using Recipe methodology.
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="item-icon">
+                    <i class="fas fa-balance-scale"></i>
+                  </div>
+                  <div class="item-content">
+                    <strong>Comparison:</strong> Environmental impacts of locally produced feed versus imported conventional feed.
+                  </div>
                 </div>
               </div>
             </div>
@@ -1022,357 +1544,304 @@
 </div>
 
 <style>
-.implementation-phases {
+.methodology-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 30px;
-  margin-bottom: 40px;
-}
-
-.phase-card {
-  background: white;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-  border-top: 4px solid var(--primary);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.phase-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.phase-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.phase-card:hover::before {
-  opacity: 1;
-}
-
-.phase-header {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.phase-icon {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 15px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 2rem;
-}
-
-.phase-number {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background: var(--accent);
-  color: white;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.phase-header h3 {
-  color: var(--primary);
-  margin-bottom: 5px;
-  font-size: 1.3rem;
-}
-
-.phase-timeline {
-  color: var(--accent);
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.phase-content p {
-  color: #666;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.phase-details h4, .phase-outputs h4 {
-  color: var(--primary);
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-.phase-details ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.phase-details li {
-  padding: 5px 0;
-  padding-left: 20px;
-  position: relative;
-  color: #555;
-}
-
-.phase-details li:before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-weight: bold;
-}
-
-.output-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.output-tag {
-  background: #e3f2fd;
-  color: var(--primary);
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-/* Timeline Visualization */
-.timeline-visual {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-  margin-bottom: 40px;
-}
-
-.timeline-bar {
-  height: 6px;
-  background: #e9ecef;
-  border-radius: 3px;
-  position: relative;
-  margin: 40px 0 60px;
-}
-
-.timeline-progress {
-  height: 100%;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  border-radius: 3px;
-  width: 0;
-  transition: width 1.5s ease;
-}
-
-.timeline-milestones {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
-.milestone {
-  text-align: center;
-  position: relative;
-  flex: 1;
-}
-
-.milestone-dot {
-  width: 20px;
-  height: 20px;
-  background: #dee2e6;
-  border-radius: 50%;
-  margin: 0 auto 10px;
-  position: relative;
-  z-index: 2;
-  transition: all 0.3s ease;
-}
-
-.milestone.active .milestone-dot {
-  background: var(--primary);
-  transform: scale(1.2);
-  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.2);
-}
-
-.milestone-label {
-  display: block;
-  font-weight: 600;
-  color: var(--primary);
-  margin-bottom: 5px;
-}
-
-.milestone-duration {
-  font-size: 0.8rem;
-  color: #6c757d;
-}
-
-/* Timeline Summary */
-.timeline-summary {
   margin-top: 40px;
 }
 
-.summary-card {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  padding: 25px;
-  border-radius: 12px;
+.methodology-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border-top: 5px solid var(--primary);
+  position: relative;
+}
+
+.methodology-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 25px 30px;
   display: flex;
   align-items: center;
-  border-left: 4px solid var(--primary);
+  position: relative;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.summary-card i {
-  font-size: 3rem;
-  color: var(--primary);
-  margin-right: 20px;
-}
-
-.summary-content h4 {
-  color: var(--primary);
-  margin-bottom: 5px;
-}
-
-.summary-content p {
-  color: #666;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.progress {
-  height: 30px;
-  background: #dee2e6;
-  border-radius: 15px;
-  overflow: hidden;
-  display: flex;
-}
-
-.progress-bar {
-  height: 100%;
+.methodology-number {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 0.7rem;
-  font-weight: 600;
-  transition: width 0.5s ease;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 5px 15px rgba(13, 59, 102, 0.3);
 }
 
-.progress-bar:nth-child(1) { background: #0066cc; }
-.progress-bar:nth-child(2) { background: #0088ff; }
-.progress-bar:nth-child(3) { background: #4db8ff; }
+.methodology-title {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin: 0;
+  flex: 1;
+}
 
-/* Responsive Design */
+.card-icon {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-left: 15px;
+}
+
+.methodology-content {
+  padding: 30px;
+}
+
+.objective-summary {
+  font-size: 1.1rem;
+  color: var(--dark);
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #e2e8f0;
+  font-weight: 500;
+}
+
+.content-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.section-title i {
+  color: var(--accent);
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+.section-title h4 {
+  color: var(--primary);
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.content-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.content-item {
+  display: flex;
+  align-items: flex-start;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border-left: 3px solid var(--secondary);
+}
+
+.content-item:hover {
+  background: #e3f2fd;
+  transform: translateX(5px);
+}
+
+.item-icon {
+  color: var(--accent);
+  margin-right: 15px;
+  font-size: 1.2rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.item-content {
+  flex: 1;
+}
+
+.method-list, .variable-list {
+  display: grid;
+  gap: 10px;
+}
+
+.method-item, .variable-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.method-item:hover, .variable-item:hover {
+  background: #e3f2fd;
+  transform: translateX(5px);
+}
+
+.method-item i, .variable-item i {
+  color: var(--accent);
+  margin-right: 10px;
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.trial-details {
+  display: grid;
+  gap: 15px;
+}
+
+.trial-item {
+  display: flex;
+  align-items: flex-start;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.trial-item:hover {
+  background: #e3f2fd;
+  transform: translateX(5px);
+}
+
+.trial-item i {
+  color: var(--accent);
+  margin-right: 15px;
+  font-size: 1.2rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.trial-content {
+  flex: 1;
+}
+
+.highlight-box {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-left: 4px solid var(--accent);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 25px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.highlight-box i {
+  color: var(--accent);
+  font-size: 1.5rem;
+  margin-right: 15px;
+  margin-top: 3px;
+}
+
+.highlight-box p {
+  margin: 0;
+  color: var(--primary);
+  font-weight: 500;
+  flex: 1;
+}
+
+/* Different colors for each card */
+.methodology-card:nth-child(1) {
+  border-top-color: #007bff;
+}
+
+.methodology-card:nth-child(1) .methodology-number {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.methodology-card:nth-child(2) {
+  border-top-color: #28a745;
+}
+
+.methodology-card:nth-child(2) .methodology-number {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+}
+
+.methodology-card:nth-child(3) {
+  border-top-color: #ffc107;
+}
+
+.methodology-card:nth-child(3) .methodology-number {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+}
+
+.methodology-card:nth-child(4) {
+  border-top-color: #dc3545;
+}
+
+.methodology-card:nth-child(4) .methodology-number {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+.methodology-card:nth-child(5) {
+  border-top-color: #6f42c1;
+}
+
+.methodology-card:nth-child(5) .methodology-number {
+  background: linear-gradient(135deg, #6f42c1, #5a3596);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .implementation-phases {
+  .methodology-grid {
     grid-template-columns: 1fr;
   }
   
-  .phase-card {
+  .card-header {
+    flex-direction: column;
+    text-align: center;
     padding: 20px;
   }
   
-  .timeline-milestones {
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .milestone {
-    display: flex;
-    align-items: center;
-    text-align: left;
-  }
-  
-  .milestone-dot {
-    margin: 0 15px 0 0;
-    flex-shrink: 0;
-  }
-  
-  .summary-card {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .summary-card i {
+  .methodology-number {
     margin-right: 0;
     margin-bottom: 15px;
   }
   
-  .progress {
-    height: 20px;
+  .card-icon {
+    margin-left: 0;
+    margin-top: 10px;
   }
   
-  .progress-bar span {
-    display: none;
+  .methodology-content {
+    padding: 20px;
+  }
+  
+  .content-item, .trial-item {
+    flex-direction: column;
+  }
+  
+  .item-icon, .trial-item i {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .highlight-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .highlight-box i {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
 </style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Animate timeline progress
-  const timelineProgress = document.querySelector('.timeline-progress');
-  if (timelineProgress) {
-    setTimeout(() => {
-      timelineProgress.style.width = '100%';
-    }, 500);
-  }
-  
-  // Add phase card interactions
-  const phaseCards = document.querySelectorAll('.phase-card');
-  phaseCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-      const phase = this.getAttribute('data-phase');
-      const milestone = document.querySelector(`.milestone[data-phase="${phase}"]`);
-      if (milestone) {
-        milestone.classList.add('active');
-      }
-    });
-    
-    card.addEventListener('mouseleave', function() {
-      const phase = this.getAttribute('data-phase');
-      const milestone = document.querySelector(`.milestone[data-phase="${phase}"]`);
-      if (milestone) {
-        milestone.classList.remove('active');
-      }
-    });
-  });
-  
-  // Add scroll animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animationDelay = entry.target.dataset.delay || '0s';
-        entry.target.classList.add('animated');
-      }
-    });
-  }, observerOptions);
-  
-  phaseCards.forEach(card => {
-    observer.observe(card);
-  });
-});
-</script>
-
 
   <!-- Footer -->
   <footer>
