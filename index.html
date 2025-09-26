@@ -300,9 +300,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+[data-aos=fade-right] {
+    transform: translate3d(-100px, 0, 0);
+    padding-bottom: 1rem;
+}
+
 .row>* {
     flex-shrink: 0;
-    width: 100%;
     max-width: 100%;
     text-align: center;
     padding-right: calc(var(--bs-gutter-x) * .5);
@@ -321,6 +325,7 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 4px solid var(--secondary);
   height: 100%;
   max-width: 100%;
+  ;
 }
 
 .metadata-card:hover {
@@ -334,7 +339,6 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 15px;
-  display: flex;
   align-items: center;
 }
 
@@ -704,7 +708,8 @@ footer {
       </div>
       <div class="col-md-6 col-lg-4" data-aos="fade-left" data-aos-delay="100">
         <div class="metadata-card">
-          <h5><i class="fas fa-handshake"></i> Collaborators</h5>
+          <h5><i class="fas fa-handshake"></i> Co-Investigator</h5>
+          <h6>Qatar</h6>
           <p>Dr Mohammad Alherbawi – HBKU (Qatar)</p>
         </div>
       </div>
@@ -775,7 +780,7 @@ footer {
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
           <div class="page-preview-card">
             <i class="fas fa-tasks"></i>
-            <h3>Work Plan</h3>
+            <h3>Work Packages</h3>
             <p>Detailed methodology, technical description, and project timeline.</p>
             <a href="workplan.html" class="btn btn-primary">View Plan</a>
           </div>
